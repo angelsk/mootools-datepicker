@@ -1,0 +1,258 @@
+.datepicker_light {
+	position: absolute;
+	font-size: 10px;
+	font-family: "Lucida Grande", LucidaGrande, "Lucida Sans", Geneva, Verdana, sans-serif;
+	color: #666;
+	line-height: normal;
+	width: 172px;
+	height: 135px;
+	padding: 14px;
+	background: url(frame.png) no-repeat;
+}
+
+.datepicker_calendar {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+/* header
+********************************************************/
+.datepicker_light .header {
+	position: relative;
+	height: 15px;
+	margin-bottom: 5px;
+	padding-top: 1px;
+}
+
+.datepicker_light .header .title {
+	text-align: center;
+	margin: 2px 18px 0 18px;
+}
+
+.datepicker_light .header .titleText {
+	color: #222;
+	font-weight: bold;
+}
+
+.datepicker_light .header .previous,
+.datepicker_light .header .next,
+.datepicker_light .header .closeButton {
+	position: absolute;
+	cursor: pointer;
+	text-indent: -40px;
+	overflow: hidden;
+	width: 12px;
+	height: 12px;
+	top: 2px;
+	background-image: url(buttons.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+.datepicker_light .header .previous {
+	left: 4px;
+}
+.datepicker_light .header .previous:hover {
+	background-position: left bottom;
+}
+.datepicker_light .header .next {
+	right: 4px;
+	background-position: -13px top;
+}
+.datepicker_light .header .next:hover {
+	background-position: -13px bottom;
+}
+.datepicker_light .header .closeButton {
+	display: none;
+	right: 0px;
+	top: 0px;
+	background-position: right top;
+}
+.datepicker_light .header .closeButton:hover {
+	background-position: right bottom;
+}
+
+/* body
+********************************************************/
+.datepicker_light .body {
+	position: relative;
+	top: 0px;
+	left: 2px;
+	width: 168px;
+	height: 112px;
+	overflow: hidden;
+}
+
+/* time
+********************************************************/
+.datepicker_light .time {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.datepicker_light .time .hour,
+.datepicker_light .time .separator,
+.datepicker_light .time .minutes {
+	background: #ccc;
+	border: 0px;
+	width: 50px !important;
+	font-size: 32px !important;
+	color: #000;
+	position: absolute;
+	top: 10px;
+	text-align: center;
+	padding: 2px;
+}
+
+.datepicker_light .time .hour {
+	left: 15px;
+}
+.datepicker_light .time .separator {
+	background: transparent;
+	width: 10px !important;
+	left: 76px;
+}
+
+.datepicker_light .time .minutes {
+	left: 95px;
+}
+.datepicker_light .time .ok {
+	position: absolute;
+	top: 65px;
+	height: 32px;
+	width: 136px;
+	left: 15px;
+	font-size: 20px;
+}
+
+/* days-grid
+********************************************************/
+.datepicker_light .days .day {
+	float: left;
+	text-align: center;
+	overflow: hidden;
+	width: 23px;
+	padding-top: 1px;
+	height: 14px;
+	margin: 0 1px 1px 0;
+}
+.datepicker_light .days .titles {
+	height: 15px;
+	margin-bottom: 2px;
+	text-transform: uppercase;
+	color: #555;
+}
+.datepicker_light .days .day0 {
+	margin-right: 0;
+}
+
+.datepicker_light .days .week5 .day {
+	margin-bottom: 0;
+}
+
+/* days-colors
+********************************************************/
+.datepicker_light .days .week .day {
+	cursor: pointer;
+}
+.datepicker_light .days .week .day:hover {
+	color: #E32940;
+}
+
+.datepicker_light .days .otherMonth {
+	color: #ccc;
+}
+
+.datepicker_light .days .selected {
+	color: #E32940;
+	font-weight: bold;
+}
+
+.datepicker_light .days .today {
+  border: 1px dotted #E32940;
+  margin: 0;
+  padding-top: 0;
+}
+
+/* months-grid
+********************************************************/
+.datepicker_light .months .month {
+	float: left;
+	cursor: pointer;
+	text-align: center;
+	padding-top: 6px;
+	width: 55px;
+	overflow: hidden;
+	height: 21px;
+	margin: 0 1px 1px 0;
+}
+
+.datepicker_light .months .month3,
+.datepicker_light .months .month6,
+.datepicker_light .months .month9,
+.datepicker_light .months .month12 {
+	margin-right: 0;
+}
+
+.datepicker_light .months .month10,
+.datepicker_light .months .month11,
+.datepicker_light .months .month12 {
+	margin-bottom: 0;
+}
+
+/* months-colors
+********************************************************/
+.datepicker_light .months .month:hover {
+	color: #E32940;
+}
+
+.datepicker_light .months .selected {
+	color: #E32940;
+}
+
+/* years-grid
+********************************************************/
+.datepicker_light .years .year {
+	float: left;
+	cursor: pointer;
+	text-align: center;
+	padding-top: 6px;
+	width: 32px;
+	overflow: hidden;
+	height: 21px;
+	margin: 0 1px 1px 0;
+}
+
+.datepicker_light .years .year4,
+.datepicker_light .years .year9,
+.datepicker_light .years .year14,
+.datepicker_light .years .year19 {
+	margin-right: 0;
+}
+
+.datepicker_light .years .year15,
+.datepicker_light .years .year16,
+.datepicker_light .years .year17,
+.datepicker_light .years .year18,
+.datepicker_light .years .year19 {
+	margin-bottom: 0;
+}
+
+/* years-colors
+********************************************************/
+.datepicker_light .years .year:hover {
+	color: #E32940;
+}
+
+.datepicker_light .years .selected {
+	color: #E32940
+}
+
+/* global
+********************************************************/
+.datepicker_light .unavailable {
+	color: #533 !important;
+	cursor: default !important;
+	text-decoration: line-through;
+}
