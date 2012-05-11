@@ -63,14 +63,19 @@ Just include the file in your page with a script tag to use the translations.
 
 Currently the following languages are supported
 
-- en-US
+- af-ZA
+- cs-CZ
 - de-DE
+- en-US
+- es-ES
 - fr-FR
+- he-IL
 - it-IT
 - nl-NL
-- cs-CZ
-- ru-RU
 - pl-PL
+- pt-BR
+- ru-RU
+- sv-SE
 
 You can set the current language with:
 
@@ -98,15 +103,18 @@ All the options of the Picker and Picker.Attach classes, and:
 - minDate: (*Date instance*, *string*, defaults to `null`) Minimum date allowed to pick. Blocks anything before.
 - maxDate: (*Date instance*, *string*, defaults to `null`) Maximum date allowed to pick. Blocks anything after.
 - availableDates: (*object*, defaults to `null`) When only a few dates should be selectable. An object like `{2011: {1: [19, 29, 31], 3: [5, 19, 24]}}` with all the dates (year -> months -> days).
+- invertAvailable: (*boolean*, defaults to `false`) Invert the `availableDates` option.
 - format: (*string*, defaults to the default localized format) The format to output into the input field. Uses [Date.format](http://mootools.net/docs/more/Types/Date#Date:format)
 - timePicker: (*boolean*, defaults to 1 `false`) Enable/disable timepicker functionality. Hours/Minutes values can be changed using the scrollwheel.
 - timeWheelStep: (*number*, defaults to `1`) The number of minutes the minutes field will change in the timepicker when using the scrollwheel, for example 5, 10, 15. The value will always be k * timeWheelStep.
 - yearPicker: (*boolean*, defaults to `true`) Enable/disable yearpicker functionality. Makes it much easier to change years.
 - yearPerPage: (*number*, defaults to `20`) Amount of years to show in the year-picking view. Be aware that this may affect your layout.
 - startView: (*string*, defaults to `days`) The view that will be showed when the picker opens. The options are `time`, `days`, `months` and `years`
+- openLastView: (*boolean*, defaults to `false`) Opens the last opened view after the picker is opened again, instead of the `startView`
 - pickOnly: (*string*, defaults to `false`) If you just want to pick a year, month, day or time. The options are `time`, `days`, `months` and `years`
 - canAlwaysGoUp: (*array*, defaults to `['months', 'days']`) The views where you can click the title to go up. The options are `time`, `days`, `months` and `years`
 - updateAll (*boolean*, defaults to `false`) whether or not to update all inputs when selecting a date
+- weeknumbers (*boolean*, defaults to `false`) display weeknumbers for the `days` view
 - months_abbr: (*array*) An array with the month name abbreviations. If nothing is set, it will automatically use MooTools Locale to get the abbreviations
 - days_abbr: (*array*) An array with the day name abbreviations. If nothing is set, it will automatically use MooTools Locale to get the abbreviations
 - years_title: (*function*, defaults to a function which returns `year + '-' + (year + options.yearsPerPage - 1)`) A function that returns the title for the yearpicker with as arguments the date object and the options object.
@@ -141,7 +149,6 @@ All the options of the Picker and Picker.Attach classes, and:
 		}
 	});
 
-
 Picker.Date method: select
 --------------------------
 
@@ -161,6 +168,28 @@ Selects a date manually.
 - Picker.Date instance.
 
 
+Class: Picker.Date.Range
+------------------------
+
+The range picker can be used to select date ranges, with a start date and a end date.
+
+### Syntax:
+
+	#JS
+	var dp = new Picker.Date.Range([element, options]);
+
+### Arguments:
+
+#### Options:
+
+All `Picker.Date` options plus:
+
+- getStartEndDate: (*function*) Parses the two dates in the input field to `Date` instances. Signature: `function(input)`
+- setStartEndDate: (*function*) Formats the dates and sets the input field value. Signature: `function(input, dates)`
+- columns: (*number*, defaults to `3`) Number of columns
+- footer: (*boolean*, defaults to `true`) Creates an extra footer element
+
+
 Class: Picker.Attach
 --------------------
 
@@ -176,6 +205,7 @@ This class adds a outerclick as well to close the Picker if you click outside th
 #### Options:
 
 - toggle: (*element*, *string*, *array*) A collection of elements which will toggle the picker when such a link is clicked.
+- togglesOnly: (*boolean, defaults to `true`) If the `toggle` option is set, this option determines if the focus/blur events on the input fields are still added as well.
 - blockKeydown: (*boolean*, defaults to `true`) Whether it should block keydown events, so the user can type into the input field or not.
 
 ### Picker.Attach Method: attach
@@ -225,6 +255,8 @@ This is a generic Picker Class, which is used for the basic things, like positio
 - positionOffset: (*object*, defaults to `{x: 0, y: 0}`) Allows you to tweak the position at which the datepicker appears, relative to the input element. Formatted as an object with x and y properties. Values can be negative.
 - pickerPosition: (*string*, defaults to `bottom`) If the picker is positioned relative to an element, you can choose to position it top, bottom, left or right.
 - draggable: (*boolean*, defaults to `true`) Will make the picker draggable, if Drag from MooTools More is included.
+- columns: (*number*, defaults to `1`) Number of columns
+- footer: (*boolean*, defaults to `false`) Creates an extra footer element
 
 #### Events:
 
