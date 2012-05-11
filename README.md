@@ -35,7 +35,7 @@ First you need to include the following html tags:
 	<script src="../Source/Picker.Attach.js" type="text/javascript"></script>
 	<script src="../Source/Picker.Date.js" type="text/javascript"></script>
 
-	<link href="../Source/datepicker_dashboard/datepicker_dashboard.css" rel="stylesheet">
+	<link href="../Assets/datepicker_dashboard/datepicker_dashboard.css" rel="stylesheet">
 
 Then you can simply use, for example:
 
