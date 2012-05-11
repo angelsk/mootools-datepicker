@@ -12,7 +12,7 @@ and has improved a lot since then. Though it should be (almost) backward compati
 
 ![Screenshot](https://github.com/arian/mootools-datepicker/raw/master/screenshot.png)
 
-As of version 2.1.1 the datepicker will work with MooTools 1.4.1.
+As of version 2.1.1 the datepicker will work with MooTools 1.4.5 (inc IE7).
 
 How to use
 ----------
