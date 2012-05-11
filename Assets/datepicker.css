@@ -10,6 +10,22 @@
 	z-index: 3003;
 }
 
+.datepicker.column_2 {
+	width: 393px;
+}
+
+.datepicker.column_3 {
+	width: 592px;
+}
+
+.datepicker.column_4 {
+	width: 791px;
+}
+
+.datepicker.column_5 {
+	width: 990px;
+}
+
 /* header
 ********************************************************/
 .datepicker .header {
@@ -18,17 +34,19 @@
 	height: 21px;
 	padding-top: 4px;
 	margin-bottom: 3px;
+	overflow: hidden;
 }
 
 .datepicker .header .title {
 	text-align: center;
 	padding-top: 1px;
-	margin: 0px 42px 0 20px;
+	position: absolute;
+	color: #fff;
+	font-weight: bold;
+	width: 99999px;
 }
 
 .datepicker .header .titleText {
-	color: #fff;
-	font-weight: bold;
 }
 .datepicker .header .next,
 .datepicker .header .previous,
@@ -58,10 +76,43 @@
 	position: relative;
 	top: 0px;
 	left: 0px;
-	width: 194px;
-	border-right: 2px solid #fff;
 	height: 193px;
 	overflow: hidden;
+}
+
+/* Columns */
+
+.datepicker .body .column {
+	float: left;
+	width: 194px;
+	min-height: 193px;
+	margin-left: 5px;
+}
+
+.datepicker .body .column.column_1 {
+	margin-left: 0;
+}
+
+.datepicker .titleText .column {
+	float: left;
+	width: 194px;
+	margin-left: 5px;
+}
+
+.datepicker .titleText .column.column_1 {
+	margin-left: 0;
+}
+
+/* Footer */
+
+.datepicker.footer {
+	height: 280px;
+}
+
+.datepicker .footer {
+	margin-top: 3px;
+	padding: 15px 5px;
+	height: 26px;
 }
 
 /* time
@@ -208,6 +259,10 @@
 	color: #fff !important;
 }
 
+.datepicker .days .otherMonth.selected {
+	background: #bbbfc8 !important;
+}
+
 .datepicker .unavailable,
 .datepicker .body .days .week .day.unavailable:hover {
 	background: #edd !important;
@@ -220,4 +275,24 @@
 .datepicker .years .year:hover {
 	background: #5D6E95 !important;
 	color: #fff !important;
+}
+
+.datepicker .days.weeknumbers .day {
+	width: 22px;
+}
+
+.datepicker .days.weeknumbers .day.weeknumber,
+.datepicker .days.weeknumbers .day.weeknumber:hover {
+	color: #AAA !important;
+	width: 16px !important;
+	background: #EEE !important;
+}
+
+.datepicker table {
+	border-spacing: 0;
+}
+
+.datepicker th,
+.datepicker td {
+	padding: 0;
 }

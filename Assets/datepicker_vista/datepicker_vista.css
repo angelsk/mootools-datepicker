@@ -245,3 +245,12 @@
 	color: #fbb !important;
 	cursor: default !important;
 }
+
+.datepicker_vista table {
+	border-spacing: 0;
+}
+
+.datepicker_vista th,
+.datepicker_vista td {
+	padding: 0;
+}
