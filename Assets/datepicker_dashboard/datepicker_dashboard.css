@@ -246,10 +246,10 @@
 }
 
 .datepicker_dashboard table {
-  border-spacing: 0;
+	border-spacing: 0;
 }
-    
+	 
 .datepicker_dashboard th,
 .datepicker_dashboard td {
-  padding: 0;
+	padding: 0;
 }
