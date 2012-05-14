@@ -41,16 +41,46 @@
 			startView: 'days',
 			yearPicker: false,
 			minDate: '2011-1-19',
-			maxDate: '2011-3-24',
+			maxDate: '2011-10-24',
 			availableDates: {
 				2011: {
 					1: [19, 29, 31],
-					2: [14],
-					3: [5, 19, 24]
+					3: [5, 19, 24],
+					7: [6, 8, 20],
+					8: [29],
+					9: [15, 20],
+					10:[2]
 				}
 			}
 		});
 
+		new Picker.Date('myInput4', {
+			pickerClass: 'datepicker_vista',
+			format: '%Y-%m-%d',
+			startView: 'days',
+			yearPicker: false,
+			minDate: '2011-1-19',
+			maxDate: '2011-10-24',
+			availableDates: {
+				2011: {
+					1: [19, 29, 31],
+					3: [5, 19, 24],
+					7: [6, 8, 20],
+					8: [29],
+					9: [15, 20],
+					10:[2]
+				}
+			},
+			invertAvailable: true
+		});
+
+		new Picker.Date('myInput5', {
+			yearPicker: false,
+			draggable: false,
+			format: '%e %b %Y',
+			allowEmpty: false,
+			maxDate: Date.parse(' 6 Dec 2010')
+		});
 
 	});
 
@@ -59,6 +89,7 @@
 </head>
 
 <body>
+
 	<h1>Min and Max dates</h1>
 
 	<p>
@@ -78,8 +109,14 @@
 		Input (only a few dates are available):<br />
 		<input type="text" id="myInput3">
 	</p>
-
-
+	<p>
+		Input (invert previously available dates):<br />
+		<input type="text" id="myInput4">
+	</p>
+	<p>
+		Input with only maxDate:<br />
+		<input type="text" id="myInput5" value=" 6 Nov 2010" />
+	</p>
 
 </body>
 </html>
