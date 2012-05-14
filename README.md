@@ -64,6 +64,7 @@ Just include the file in your page with a script tag to use the translations.
 Currently the following languages are supported
 
 - en-US
+- en_GB
 - de-DE
 - fr-FR
 - it-IT
